@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS | Página Inicial</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1>ADS | Página de Notícias</h1>
+                <ul class="links">
+                    <div class="navElements">
+                        <li class="linkNav"><a href="index.html"><i class="bi bi-house"></i>Início</a></li>
+                        <li>|</li>
+                        <li class="linkNav"><a href="pagina2.html"><i class="bi bi-hr"></i>Página 2</a></li>
+                        <li>|</li>
+                        <li class="linkNav"><a href="pagina3.html"><i class="bi bi-box2"></i>Página 3</a></li>
+                        <li>|</li>
+                        <li class="linkNav"><a href="statelink.html"><i class="bi bi-link"></i>Statelink</a></li>
+                    </div>
+                </ul>
+            </nav>
+            <input id="cepInput" type="text" inputmode="numeric" maxlength="9" placeholder="00000-000">
+            <button id="consultarBtn">Consultar</button>
+        </div>
+    </header>
+    <main id="mainIndex">
+        <h2 id="noticiasTitulo">Notícias do Dia</h2>
+        <section class="secaoNoticia">
+            <div class="noticia">
+                <h3 class="tituloNoticia">Morador de Curitiba representará o Brasil na WorldSkills Xangai 2026</h3>
+                <img src="https://www.plural.jor.br/content/images/size/w960/format/webp/2026/09/unnamed--1-.png"
+                    alt="Imagem da Notícia">
+                <br>
+                <p class="descricaoNoticia">Entre os dias 22 e 27 de setembro, em Xangai, na China, acontece o
+                    WorldSkills Xangai 2026, que reúne
+                    competidores de profissões técnicas de todo mundo. Nesta edição, cinco paranaenses estão na disputa:
+                    Davi da Silva Aleixo Ignacio (Construção em Alvenaria), Gabriel Henrique Gobato de Oliveira
+                    (Computação em Nuvem), Kaique William Ventura Camacho (Tecnologia Optoeletrônica) e Kauan Henrique
+                    Martinello Nazario (Tecnologia Automotiva), além de Erán Martínez Ramos (Design de Mídias Digitais
+                    Interativas).</p>
+                <br>
+                <p class="descricaoNoticia">Erán é egresso do curso técnico em mecatrônica do Senai Dr. Celso Charuri,
+                    em Curitiba e conseguiu
+                    unir o curso de formação com o Design de Mídias Digitais, modalidade proposta pela WorldSkills
+                    China, que reúne design gráfico, produção de vídeo, animação e lógica de software, tudo a serviço da
+                    comunicação visual e da experiência do usuário.</p>
+                <br>
+                <p class="descricaoNoticia">A ocupação de Erán reúne três frentes de trabalho: mídia estática (pôsteres,
+                    cartazes, cartões),
+                    mídia móvel (vídeos curtos) e mídia interativa (aplicativos com botões, formulários e até jogos). A
+                    avaliação leva em conta desde a harmonia entre cores até a estrutura de um texto ou a relevância da
+                    mensagem transmitida ao usuário.</p>
+                <span class="leiaMais"><a target="_blank"
+                        href="https://www.plural.jor.br/curitiba/morador-de-curitiba-representara-o-brasil-na-worldskills-xangai-2026/">Leia
+                        mais...</a></span>
+            </div>
+        </section>
+        <section class="secaoNoticia">
+            <div class="noticia">
+                <h3 class="tituloNoticia">Chuvarada provoca quedas de árvores, alagamentos e prejudica o trânsito em
+                    Curitiba</h3>
+                <img src="https://www.plural.jor.br/content/images/size/w960/format/webp/2026/09/chuva.jpg"
+                    alt="Imagem da Notícia">
+                <br>
+                <p class="descricaoNoticia">Dados do Sistema Meteorológico do Paraná (Simepar) indicam que a
+                    precipitação acumulada é de 8mm para esta terça-feira (01). Entre ontem e a madrugada de hoje o
+                    maior volume de chuvas na capital foi de 77 mm, registrado na estação do Córrego Bigorrilho. A
+                    chuvarada provocou quedas de árvores, alagamentos e prejudicou o trânsito na capital.
+                </p>
+                <p class="descricaoNoticia">Ao todo, entre ontem e hoje, a Defesa Civil atendeu a 60 quedas de árvores,
+                    23 alagamentos e fez cinco entregas de lona. Apesar disso, não houve registro de desabrigados ou
+                    desalojados.</p>
+                <span class="leiaMais"><a target="_blank"
+                        href="https://www.plural.jor.br/curitiba/chuvarada-provoca-quedas-de-arvores-alagamentos-e-prejudica-o-transito-em-curitiba/">Leia
+                        mais...</a></span>
+            </div>
+        </section>
+    </main>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
