@@ -1,158 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Página INDEX.HTML (principal) */
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Valley Sans';
-    background-color: #F8F9FA;
-    color: #1A1A1A;
+  font-family: "Valley Sans";
+  background-color: #f8f9fa;
+  color: #1a1a1a;
 }
 
-.container {
-    background-color: #0F2027;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    height: 50px;
-    color: #FFFFFF;
-    position: relative;
+.mainContainer {
+  background-color: #0f2027;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  color: #ffffff;
+  position: relative;
 }
 
 h1 {
-    position: absolute;
-    left: 10px;
-    display: inline;
-    font-size: 26px;
+  position: absolute;
+  left: 10px;
+  display: inline;
+  font-size: 26px;
 }
 
 #noticiasTitulo {
-    position: relative;
-    font-size: 28px;
-    font-weight: bold;
-    left: 20px;
-    top: 10px;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  left: 20px;
+  top: 10px;
 }
 
-
 .links {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .navElements {
-    display: flex;
-    align-items: center;
-    width: 450px;
-    border: 2px solid white;
-    border-radius: 15px;
-    justify-content: center;
-    background-color: #152238;
+  display: flex;
+  align-items: center;
+  width: 250px;
+  border: 2px solid white;
+  border-radius: 15px;
+  justify-content: center;
+  background-color: #152238;
 }
 
 input[type="text"] {
-    font-size: 16px;
-    position: absolute;
-    padding: 2px 10px;
-    right: 130px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    outline: none;
+  font-size: 16px;
+  position: absolute;
+  padding: 2px 10px;
+  right: 130px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  outline: none;
 }
 
 #consultarBtn {
-    font-size: 16px;
-    position: absolute;
-    right: 20px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
-    padding: 2px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  font-size: 16px;
+  position: absolute;
+  right: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 2px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 #consultarBtn:hover {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 i {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 nav a {
-    color: #FFFFFF;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 nav a:hover {
-    transition: 1s;
-    color: cadetblue;
+  transition: 1s;
+  color: cadetblue;
 }
 
 .linkNav {
-    height: 35px;
-    width: 100px;
-    text-align: center;
-    align-content: center;
-    
+  height: 35px;
+  width: 100px;
+  text-align: center;
+  align-content: center;
 }
 
 #mainIndex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .noticia {
-    display: inline-block;
-    background-color: #FFFFFF;
-    height: auto;
-    width: 1000px;
-    margin: 20px;
-    padding: 20px;
-    border: 2px solid #e9ecee;
-    border-radius: 30px;
-    text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  height: auto;
+  width: 1000px;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid #e9ecee;
+  border-radius: 30px;
+  text-align: center;
 }
 
 img {
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: 850px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 850px;
 }
 
 .tituloNoticia {
-    font-size: 26px;
-    font-weight: bolder;
-    padding-bottom: 15px;
+  font-size: 26px;
+  font-weight: bolder;
+  padding-bottom: 15px;
 }
 
 .descricaoNoticia {
-    font-size: 18px;
-    padding-top: 10px;
-    text-align: center;
-    width: 780px;
-    margin: 0 auto;
+  font-size: 18px;
+  padding-top: 10px;
+  text-align: center;
+  width: 780px;
+  margin: 0 auto;
 }
 
 span.leiaMais {
-    border: 2px solid #e9ecee;
-    border-radius: 30px;
-    display: inline-block;
-    padding: 6px;
-    margin-top: 10px;
+  border: 2px solid #e9ecee;
+  border-radius: 30px;
+  display: inline-block;
+  padding: 6px;
+  margin-top: 10px;
 }
 
 span.leiaMais a {
-    color: #1A1A1A;
-    text-decoration: none;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* ELEIÇÕES */
+
+.eleicoesContainer {
+  background-color: #006437;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  color: #ffffff;
+  position: relative;
+}
+
+.eleicoesNavElements {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  border: 2px solid white;
+  border-radius: 15px;
+  justify-content: center;
+  background-color: #006437;
+}
+
+.input-eleicao {
+  position: static !important;
+  display: block !important;
+  margin: 10px auto !important;
+  width: 250px !important;
+  right: auto !important;
+  text-align: center;
+}
+
+.colinha-card {
+  border: 2px solid #0066cc;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.candidato-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.candidato-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.candidato-foto {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0066cc;
+  margin-right: 15px;
+  background-color: #ddd;
+  flex-shrink: 0;
+}
+.candidato-info h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 16px;
+}
+.candidato-info p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #555;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resultadoColinha,
+  #resultadoColinha * {
+    visibility: visible;
+  }
+  #resultadoColinha {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .nao-imprimir {
+    display: none !important;
+  }
 }
