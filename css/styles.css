@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Página INDEX.HTML (principal) */
+/* Página INDEX.HTML */
 
 * {
   padding: 0;
@@ -155,7 +155,7 @@ span.leiaMais a {
   text-decoration: none;
 }
 
-/* ELEIÇÕES */
+/* COLINHA */
 
 .eleicoesContainer {
   background-color: #006437;
