@@ -1,88 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UrbanSync | Minha Colinha Eleitoral</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="eleicoesContainer nao-imprimir">
-        <div class="container">
-            <nav>
-                <h1>UrbanSync | Minha Colinha</h1>
-                <ul class="links">
-                    <div class="eleicoesNavElements">
-                        <li class="linkNav"><a href="index.html"><i class="bi bi-house"></i>Início</a></li>
-                        <li>|</li>
-                        <li class="linkNav"><a href="eleicoes.html"><i class="bi bi-pencil-square"></i>Colinha</a></li>
-                    </div>
-                </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <nav>
+          <h1>UrbanSync | Minha Colinha</h1>
+          <ul class="links">
+            <div class="eleicoesNavElements">
+              <li class="linkNav">
+                <a href="index.html"><i class="bi bi-house"></i>Início</a>
+              </li>
+              <li>|</li>
+              <li class="linkNav">
+                <a href="eleicoes.html"
+                  ><i class="bi bi-pencil-square"></i>Colinha</a
+                >
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main id="mainIndex">
-        <h2 id="noticiasTitulo" class="nao-imprimir">Monte a sua Colinha Eleitoral</h2>
-        <p class="descricaoNoticia nao-imprimir">Digite o número do seu candidato para preencher automaticamente o nome, partido e foto:</p>
+      <h2 id="noticiasTitulo" class="nao-imprimir">
+        Monte a sua Colinha Eleitoral
+      </h2>
+      <p class="descricaoNoticia nao-imprimir">
+        Digite o número do seu candidato para preencher automaticamente o nome,
+        partido e foto:
+      </p>
 
-        <section class="noticia nao-imprimir" style="width: 500px; text-align: center;">
-            <div style="margin-bottom: 20px;">
-                <label for="inputPresidente"><strong>Número do Presidente (2 dígitos):</strong></label>
-                
-                <input type="text" id="inputPresidente" class="input-eleicao" maxlength="2" placeholder="Ex: 13 ou 22">
+      <section
+        class="noticia nao-imprimir"
+        style="width: 500px; text-align: center"
+      >
+        <form id="colinhaForm">
+          <div style="margin-bottom: 20px">
+            <label for="inputPresidente"
+              ><strong>Número do Presidente (2 dígitos):</strong></label
+            >
+
+            <input
+              type="text"
+              id="inputPresidente"
+              class="input-eleicao"
+              maxlength="2"
+              placeholder="Ex: 13 ou 22"
+            />
+          </div>
+
+          <div style="margin-bottom: 20px">
+            <label for="inputVereador"
+              ><strong>Número do Vereador (5 dígitos):</strong></label
+            >
+            <input
+              type="text"
+              id="inputVereador"
+              class="input-eleicao"
+              maxlength="5"
+              placeholder="Ex: 15123"
+            />
+          </div>
+
+          <button
+            id="gerarBtn"
+            style="
+              padding: 10px 20px;
+              background-color: #0066cc;
+              color: white;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+              font-size: 16px;
+              font-weight: bold;
+              margin-top: 10px;
+            "
+          >
+            Gerar Minha Colinha Oficial
+          </button>
+        </form>
+      </section>
+
+      <div id="resultadoColinha" style="display: none; width: 100%">
+        <div class="colinha-card">
+          <h3
+            style="
+              color: #0066cc;
+              text-align: center;
+              margin-top: 0;
+              border-bottom: 2px solid #0066cc;
+              padding-bottom: 10px;
+            "
+          >
+            <i class="bi bi-file-earmark-text"></i> Minha Colinha Eleitoral
+          </h3>
+
+          <!-- Bloco Presidente -->
+          <div
+            class="candidato-item"
+            id="blocoPresidente"
+            style="display: none"
+          >
+            <img
+              id="fotoPresidente"
+              src=""
+              alt="Presidente"
+              class="candidato-foto"
+            />
+            <div class="candidato-info">
+              <span style="font-size: 11px; color: #666; font-weight: bold"
+                >PRESIDENTE</span
+              >
+              <h4 id="nomePresidente">Nome do Candidato</h4>
+              <p><strong>Número:</strong> <span id="numPresidente">--</span></p>
+              <p>
+                <strong>Partido:</strong> <span id="partidoPresidente">--</span>
+              </p>
             </div>
+          </div>
 
-            <div style="margin-bottom: 20px;">
-                <label for="inputVereador"><strong>Número do Vereador (5 dígitos):</strong></label>
-                <input type="text" id="inputVereador" class="input-eleicao" maxlength="5" placeholder="Ex: 15123">
+          <!-- Bloco Vereador -->
+          <div class="candidato-item" id="blocoVereador" style="display: none">
+            <img
+              id="fotoVereador"
+              src=""
+              alt="Vereador"
+              class="candidato-foto"
+            />
+            <div class="candidato-info">
+              <span style="font-size: 11px; color: #666; font-weight: bold"
+                >VEREADOR</span
+              >
+              <h4 id="nomeVereador">Nome do Candidato</h4>
+              <p><strong>Número:</strong> <span id="numVereador">--</span></p>
+              <p>
+                <strong>Partido:</strong> <span id="partidoVereador">--</span>
+              </p>
             </div>
+          </div>
 
-            <button id="gerarBtn" style="padding: 10px 20px; background-color: #0066cc; color: white; border: none; border-radius: 15px; cursor: pointer; font-size: 16px; font-weight: bold; margin-top: 10px;">
-                Gerar Minha Colinha Oficial
-            </button>
-        </section>
-
-        <div id="resultadoColinha" style="display: none; width: 100%;">
-            <div class="colinha-card">
-                <h3 style="color: #0066cc; text-align: center; margin-top: 0; border-bottom: 2px solid #0066cc; padding-bottom: 10px;">
-                    <i class="bi bi-file-earmark-text"></i> Minha Colinha Eleitoral
-                </h3>
-
-                <!-- Bloco Presidente -->
-                <div class="candidato-item" id="blocoPresidente" style="display: none;">
-                    <img id="fotoPresidente" src="" alt="Presidente" class="candidato-foto">
-                    <div class="candidato-info">
-                        <span style="font-size: 11px; color: #666; font-weight: bold;">PRESIDENTE</span>
-                        <h4 id="nomePresidente">Nome do Candidato</h4>
-                        <p><strong>Número:</strong> <span id="numPresidente">--</span></p>
-                        <p><strong>Partido:</strong> <span id="partidoPresidente">--</span></p>
-                    </div>
-                </div>
-
-                <!-- Bloco Vereador -->
-                <div class="candidato-item" id="blocoVereador" style="display: none;">
-                    <img id="fotoVereador" src="" alt="Vereador" class="candidato-foto">
-                    <div class="candidato-info">
-                        <span style="font-size: 11px; color: #666; font-weight: bold;">VEREADOR</span>
-                        <h4 id="nomeVereador">Nome do Candidato</h4>
-                        <p><strong>Número:</strong> <span id="numVereador">--</span></p>
-                        <p><strong>Partido:</strong> <span id="partidoVereador">--</span></p>
-                    </div>
-                </div>
-
-                <p style="text-align: center; font-size: 11px; color: #777; margin: 15px 0 0 0;">Leve este lembrete para a cabine de votação.</p>
-            </div>
-
-            <div style="text-align: center; margin-top: 20px;" class="nao-imprimir">
-                <button onclick="window.print()" style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 15px; cursor: pointer; font-size: 15px; font-weight: bold;">
-                    <i class="bi bi-file-earmark-pdf"></i> Salvar em PDF / Imprimir
-                </button>
-            </div>
+          <p
+            style="
+              text-align: center;
+              font-size: 11px;
+              color: #777;
+              margin: 15px 0 0 0;
+            "
+          >
+            Leve este lembrete para a cabine de votação.
+          </p>
         </div>
+
+        <div style="text-align: center; margin-top: 20px" class="nao-imprimir">
+          <button
+            onclick="window.print()"
+            style="
+              padding: 10px 20px;
+              background-color: #28a745;
+              color: white;
+              border: none;
+              border-radius: 15px;
+              cursor: pointer;
+              font-size: 15px;
+              font-weight: bold;
+            "
+          >
+            <i class="bi bi-file-earmark-pdf"></i> Salvar em PDF / Imprimir
+          </button>
+        </div>
+      </div>
     </main>
     <script src="./js/appCola.js"></script>
-</body>
+  </body>
 </html>

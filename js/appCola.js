@@ -25,6 +25,12 @@ const candidatosBanco = {
   },
 };
 
+const formulario = document.getElementById("colinhaForm");
+
+formulario.addEventListener("submit", function(evento) {
+  evento.preventDefault();
+});
+
 document.getElementById("gerarBtn").addEventListener("click", () => {
   const valPresidente = document.getElementById("inputPresidente").value.trim();
   const valVereador = document.getElementById("inputVereador").value.trim();
@@ -32,6 +38,15 @@ document.getElementById("gerarBtn").addEventListener("click", () => {
   if (!valPresidente && !valVereador) {
     alert("Digite pelo menos o número de um candidato!");
     return;
+  }
+
+  if(valVereador && valVereador.length < 5) {
+    alert("O número do vereador deve ter 5 dígitos!");
+    return;
+  }
+
+  if(valPresidente && valPresidente !== 2) {
+    alert("O número do presidente deve ter 2 dígitos!");
   }
 
   const blocoPresidente = document.getElementById("blocoPresidente");

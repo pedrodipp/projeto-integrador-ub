@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Corrigido a tag HTML do loading
-    mainIndex.innerHTML = `<h2 id="noticiasTitulo">A carregar dados...</h2>`;
+    mainIndex.innerHTML = `<h2 id="noticiasTitulo">Carregando dados...</h2>`;
 
     try {
       // 1. Consulta o ViaCEP
