@@ -45,8 +45,9 @@ document.getElementById("gerarBtn").addEventListener("click", () => {
     return;
   }
 
-  if(valPresidente && valPresidente !== 2) {
+  if(valPresidente && valPresidente.length !== 2) {
     alert("O número do presidente deve ter 2 dígitos!");
+    return;
   }
 
   const blocoPresidente = document.getElementById("blocoPresidente");
